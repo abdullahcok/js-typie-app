@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #1d1d1d;
+  --mainBlue: #3366ff;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+  --darkGrey: #2d2d2d;
+  --box-shadow: 0 2px 4px rgba(0,0,0, 1);
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mainBlack);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+
+select {
+  width: 80px;
+  padding: 5px;
+  margin: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+select:focus,
+button:focus {
+  outline: 0;
+}
+
+.settings-btn {
+  margin: 0 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: rgba(0,0,0,0.1);
+}
+.icon{
+  color: #2d2d2d;
+}
+.settings-btn:hover {
+  background: #fff;
+  color: #2d2d2d;
+}
+
+
+.settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 70px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.settings.hide {
+  transform: translateY(-170%);
+}
+
+.container {
+  background-color: var(--darkGrey);
+  padding: 20px;
+  margin: 50px 0;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  position: relative;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  box-shadow: var(--box-shadow);
+}
+
+h2 {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin:  60px 35px;
+  width: 200px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.text {
+  border: 1px solid #111;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  width: 240px;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+.score-container {
+  position: absolute;
+  top: 100px;
+  right: 52px;
+  font-size: 12px;
+}
+
+.time-container {
+  position: absolute;
+  top: 100px;
+  left: 62px;
+  font-size: 12px;
+}
+
+.words{
+  margin: 50px 0;
+}
+
+.end-game-container {
+  background-color: inherit;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
